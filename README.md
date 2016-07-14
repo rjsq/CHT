@@ -1,11 +1,10 @@
 # CHT
-Clicker Heroes Tools
-  includes the following functions:
+Clicker Heroes Tools includes the following functions:
   
-    - Decode the save data
-    
-    - Encode the save data
-    
-    - Ancient Souls Optimisation
-    
-    - Auto Clicker
+- Decode the save data
+ 
+- Encode the save data
+
+- Ancient Souls Optimisation
+
+- Auto Clicker
