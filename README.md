@@ -8,3 +8,5 @@ Clicker Heroes Tools includes the following functions:
 - Ancient Souls Optimisation
 
 - Auto Leveler
+
+- Auto Buy Gildings
