@@ -8,6 +8,7 @@ import java.awt.Dimension;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.event.InputEvent;
+import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -696,30 +697,38 @@ public class Main extends javax.swing.JFrame {
                     Robot robot = new Robot();
                     while (running) {
                         flag++;
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                         robot.mouseMove((int) (scroll[0] * size), (int) (scroll[1] * size));
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                         robot.mouseMove(skill[0], skill[1]);
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                         robot.mouseMove(hero[0], hero[1]);
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        Thread.sleep(1000);
+                        Thread.sleep(500);
                         robot.mouseMove(hero1[0], hero1[1]);
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        Thread.sleep(1000);
-                        robot.mouseMove(hero2[0], hero2[1]);
-                        robot.mousePress(InputEvent.BUTTON1_MASK);
-                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+//                        Thread.sleep(500);
+//                        robot.mouseMove(hero2[0], hero2[1]);
+//                        robot.mousePress(InputEvent.BUTTON1_MASK);
+//                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        
+                        Thread.sleep(500);
+                        robot.keyPress(KeyEvent.VK_T);
+                        robot.keyRelease(KeyEvent.VK_T);
+                        
+                        Thread.sleep(500);
+                        robot.keyPress(KeyEvent.VK_T);
+                        robot.keyRelease(KeyEvent.VK_T);
 
                     }
                     Thread.currentThread().interrupt();
