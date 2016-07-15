@@ -570,6 +570,7 @@ public class Main extends javax.swing.JFrame {
 
     private void levelButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_levelButtonActionPerformed
         // TODO add your handling code here:
+        running = true;
 
 //        jLabel2.setText(width + " " + height + "");
         int tab[] = {Integer.valueOf(tabX.getText()), Integer.valueOf(tabY.getText())};
@@ -605,6 +606,7 @@ public class Main extends javax.swing.JFrame {
 
     private void gildButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gildButtonActionPerformed
         // TODO add your handling code here:
+        gilding = true;
         int l1[] = {Integer.valueOf(x1.getText()), Integer.valueOf(y1.getText())};
         int l2[] = {Integer.valueOf(x2.getText()), Integer.valueOf(y2.getText())};
         int l3[] = {Integer.valueOf(x3.getText()), Integer.valueOf(y3.getText())};
