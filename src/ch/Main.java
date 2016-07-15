@@ -50,6 +50,7 @@ public class Main extends javax.swing.JFrame {
     private int mouseX;
     private int mouseY;
     private int rrr = -1;
+    private int ggg = -1;
 
     class GlobalMouseListenerExample implements NativeMouseInputListener {
 
@@ -68,6 +69,44 @@ public class Main extends javax.swing.JFrame {
                 scrollX.setText(mouseX + "");
                 scrollY.setText(mouseY + "");
                 rrr = -1;
+            }
+
+            if (ggg == 0) {
+                mouseX = e.getX();
+                mouseY = e.getY();
+                x1.setText(mouseX + "");
+                y1.setText(mouseY + "");
+                ggg = -1;
+            } else if (ggg == 1) {
+                mouseX = e.getX();
+                mouseY = e.getY();
+                x2.setText(mouseX + "");
+                y2.setText(mouseY + "");
+                ggg = -1;
+            } else if (ggg == 2) {
+                mouseX = e.getX();
+                mouseY = e.getY();
+                x3.setText(mouseX + "");
+                y3.setText(mouseY + "");
+                ggg = -1;
+            } else if (ggg == 3) {
+                mouseX = e.getX();
+                mouseY = e.getY();
+                x4.setText(mouseX + "");
+                y4.setText(mouseY + "");
+                ggg = -1;
+            } else if (ggg == 4) {
+                mouseX = e.getX();
+                mouseY = e.getY();
+                x5.setText(mouseX + "");
+                y5.setText(mouseY + "");
+                ggg = -1;
+            } else if (ggg == 5) {
+                mouseX = e.getX();
+                mouseY = e.getY();
+                x6.setText(mouseX + "");
+                y6.setText(mouseY + "");
+                ggg = -1;
             }
 //            System.out.println("Mouse Clicked: " + e.getClickCount());
         }
@@ -108,6 +147,7 @@ public class Main extends javax.swing.JFrame {
             }
             if (e.getKeyCode() == NativeKeyEvent.VC_BACKQUOTE) {
                 running = false;
+                gilding = false;
             }
         }
 
@@ -154,6 +194,27 @@ public class Main extends javax.swing.JFrame {
         scrollX = new javax.swing.JLabel();
         tabY = new javax.swing.JLabel();
         scrollY = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        gButton1 = new javax.swing.JButton();
+        gButton2 = new javax.swing.JButton();
+        gButton3 = new javax.swing.JButton();
+        x1 = new javax.swing.JLabel();
+        y1 = new javax.swing.JLabel();
+        y2 = new javax.swing.JLabel();
+        x2 = new javax.swing.JLabel();
+        y3 = new javax.swing.JLabel();
+        x3 = new javax.swing.JLabel();
+        gildButton = new javax.swing.JButton();
+        jLabel14 = new javax.swing.JLabel();
+        gButton4 = new javax.swing.JButton();
+        x4 = new javax.swing.JLabel();
+        y4 = new javax.swing.JLabel();
+        gButton5 = new javax.swing.JButton();
+        x5 = new javax.swing.JLabel();
+        y5 = new javax.swing.JLabel();
+        gButton6 = new javax.swing.JButton();
+        x6 = new javax.swing.JLabel();
+        y6 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -352,6 +413,152 @@ public class Main extends javax.swing.JFrame {
 
         jTabbedPane1.addTab("AutoLevel", jPanel5);
 
+        gButton1.setText("Get 1");
+        gButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gButton1ActionPerformed(evt);
+            }
+        });
+
+        gButton2.setText("Get 2");
+        gButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gButton2ActionPerformed(evt);
+            }
+        });
+
+        gButton3.setText("Get 3");
+        gButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gButton3ActionPerformed(evt);
+            }
+        });
+
+        gildButton.setText("Start");
+        gildButton.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gildButtonActionPerformed(evt);
+            }
+        });
+
+        jLabel14.setText("Click ` to stop");
+
+        gButton4.setText("Get 4");
+        gButton4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gButton4ActionPerformed(evt);
+            }
+        });
+
+        gButton5.setText("Get 5");
+        gButton5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gButton5ActionPerformed(evt);
+            }
+        });
+
+        gButton6.setText("Get 6");
+        gButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                gButton6ActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(gButton1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(x1, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(y1, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(gButton2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(x2, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(y2, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(gButton3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(y3, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel14)
+                    .addComponent(gildButton)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(gButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(x4, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(y4, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(gButton5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(y5, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(gButton6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(x6, javax.swing.GroupLayout.PREFERRED_SIZE, 82, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(y6, javax.swing.GroupLayout.PREFERRED_SIZE, 84, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(238, Short.MAX_VALUE))
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(gButton1)
+                            .addComponent(x1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(y1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(gButton2))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(x2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(y2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(gButton3)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(x3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(y3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(gButton4)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(x4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(y4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(gButton5)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(x5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(y5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(gButton6)
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                        .addComponent(x6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(y6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 56, Short.MAX_VALUE)
+                .addComponent(gildButton)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel14)
+                .addContainerGap())
+        );
+
+        jTabbedPane1.addTab("BuyGilds", jPanel3);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -401,6 +608,47 @@ public class Main extends javax.swing.JFrame {
         rrr = 1;
     }//GEN-LAST:event_scrollButtonActionPerformed
 
+    private void gildButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gildButtonActionPerformed
+        // TODO add your handling code here:
+        int l1[] = {Integer.valueOf(x1.getText()), Integer.valueOf(y1.getText())};
+        int l2[] = {Integer.valueOf(x2.getText()), Integer.valueOf(y2.getText())};
+        int l3[] = {Integer.valueOf(x3.getText()), Integer.valueOf(y3.getText())};
+        int l4[] = {Integer.valueOf(x4.getText()), Integer.valueOf(y4.getText())};
+        int l5[] = {Integer.valueOf(x5.getText()), Integer.valueOf(y5.getText())};
+        int l6[] = {Integer.valueOf(x6.getText()), Integer.valueOf(y6.getText())};
+        AG(l1, l2, l3, l4, l5, l6);
+    }//GEN-LAST:event_gildButtonActionPerformed
+
+    private void gButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButton1ActionPerformed
+        // TODO add your handling code here:
+        ggg = 0;
+    }//GEN-LAST:event_gButton1ActionPerformed
+
+    private void gButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButton2ActionPerformed
+        // TODO add your handling code here:
+        ggg = 1;
+    }//GEN-LAST:event_gButton2ActionPerformed
+
+    private void gButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButton3ActionPerformed
+        // TODO add your handling code here:
+        ggg = 2;
+    }//GEN-LAST:event_gButton3ActionPerformed
+
+    private void gButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButton4ActionPerformed
+        // TODO add your handling code here:
+        ggg = 3;
+    }//GEN-LAST:event_gButton4ActionPerformed
+
+    private void gButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButton5ActionPerformed
+        // TODO add your handling code here:
+        ggg = 4;
+    }//GEN-LAST:event_gButton5ActionPerformed
+
+    private void gButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_gButton6ActionPerformed
+        // TODO add your handling code here:
+        ggg = 5;
+    }//GEN-LAST:event_gButton6ActionPerformed
+
     private boolean running = true;
 
     void AL(int[] tab, int[] scroll) {
@@ -447,7 +695,6 @@ public class Main extends javax.swing.JFrame {
                             robot.mousePress(InputEvent.BUTTON1_MASK);
                             robot.mouseRelease(InputEvent.BUTTON1_MASK);
                         }
-
                     }
 
                 } catch (AWTException | InterruptedException ex) {
@@ -456,6 +703,83 @@ public class Main extends javax.swing.JFrame {
             }
         }
         Thread t = new Thread(new AutoLevel(tab, scroll));
+
+        t.start();
+    }
+
+    private boolean gilding = true;
+
+    void AG(int[] l1, int[] l2, int[] l3, int[] l4, int[] l5, int[] l6) {
+        class AutoGild implements Runnable {
+
+            int[] l1;
+            int[] l2;
+            int[] l3;
+            int[] l4;
+            int[] l5;
+            int[] l6;
+
+            AutoGild(int[] i, int[] j, int[] k, int[] l, int[] m, int[] n) {
+                l1 = i;
+                l2 = j;
+                l3 = k;
+                l4 = l;
+                l5 = m;
+                l6 = n;
+            }
+
+            @Override
+            public void run() {
+                try {
+                    Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
+                    double width = screenSize.getWidth();
+                    double height = screenSize.getHeight();
+                    double size = 1;
+                    if (abs(width - 3000) < 10 && abs(height - 2000) < 10) {
+                        size = 2.0;
+                    }
+
+                    Robot robot = new Robot();
+                    while (gilding) {
+
+                        Thread.sleep(400);
+                        robot.mouseMove((int) (l1[0] * size), (int) (l1[1] * size));
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(400);
+                        robot.mouseMove((int) (l2[0] * size), (int) (l2[1] * size));
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(400);
+                        robot.mouseMove((int) (l3[0] * size), (int) (l3[1] * size));
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(400);
+                        robot.mouseMove((int) (l4[0] * size), (int) (l4[1] * size));
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(400);
+                        robot.mouseMove((int) (l5[0] * size), (int) (l5[1] * size));
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        
+                        Thread.sleep(1100);
+                        robot.mouseMove((int) (l6[0] * size), (int) (l6[1] * size));
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                    }
+
+                } catch (AWTException | InterruptedException ex) {
+                    Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
+                }
+            }
+        }
+        Thread t = new Thread(new AutoGild(l1, l2, l3, l4, l5, l6));
 
         t.start();
     }
@@ -493,14 +817,23 @@ public class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton gButton1;
+    private javax.swing.JButton gButton2;
+    private javax.swing.JButton gButton3;
+    private javax.swing.JButton gButton4;
+    private javax.swing.JButton gButton5;
+    private javax.swing.JButton gButton6;
+    private javax.swing.JButton gildButton;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JPanel jPanel4;
     private javax.swing.JPanel jPanel5;
     private javax.swing.JTabbedPane jTabbedPane1;
@@ -515,6 +848,18 @@ public class Main extends javax.swing.JFrame {
     private javax.swing.JButton tabButton;
     private javax.swing.JLabel tabX;
     private javax.swing.JLabel tabY;
+    private javax.swing.JLabel x1;
+    private javax.swing.JLabel x2;
+    private javax.swing.JLabel x3;
+    private javax.swing.JLabel x4;
+    private javax.swing.JLabel x5;
+    private javax.swing.JLabel x6;
+    private javax.swing.JLabel y1;
+    private javax.swing.JLabel y2;
+    private javax.swing.JLabel y3;
+    private javax.swing.JLabel y4;
+    private javax.swing.JLabel y5;
+    private javax.swing.JLabel y6;
     // End of variables declaration//GEN-END:variables
 
 }
