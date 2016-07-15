@@ -5,8 +5,6 @@ Clicker Heroes Tools includes the following functions:
  
 - Encode the save data
 
-- Ancient Souls Optimisation
-
 - Auto Leveler
 
 - Auto Buy Gildings
