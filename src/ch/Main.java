@@ -53,6 +53,7 @@ public class Main extends javax.swing.JFrame {
     private int mouseY;
     private int rrr = -1;
     private int ggg = -1;
+    private double ascendtimer = 1; //hour
 
     class GlobalMouseListenerExample implements NativeMouseInputListener {
 
@@ -689,12 +690,12 @@ public class Main extends javax.swing.JFrame {
                     int[] yes = new int[2];
                     yes[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 0.95);
                     yes[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.58);
-                    
+
                     //yes location
                     int[] ascend = new int[2];
                     ascend[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 2.12);
                     ascend[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.355);
-                    
+
                     //yes location
                     int[] confirm = new int[2];
                     confirm[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 0.95);
@@ -704,7 +705,7 @@ public class Main extends javax.swing.JFrame {
                     int[] pro = new int[2];
                     pro[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 2.1);
                     pro[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.3);
-                    
+
                     //yes location
                     int[] fight = new int[2];
                     fight[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 1.8);
@@ -810,7 +811,7 @@ public class Main extends javax.swing.JFrame {
 //                            Thread.sleep(100);
 //                            robot.keyPress(KeyEvent.VK_T);
 //                            robot.keyRelease(KeyEvent.VK_T);
-                        if (flag % 2400 == 0) {
+                        if (flag % (ascendtimer * 3600 / 1.5) == 0) {
                             Thread.sleep(50);
                             robot.mouseMove(relic[0], relic[1]);
                             robot.mousePress(InputEvent.BUTTON1_MASK);
@@ -825,22 +826,22 @@ public class Main extends javax.swing.JFrame {
                             robot.mouseMove(yes[0], yes[1]);
                             robot.mousePress(InputEvent.BUTTON1_MASK);
                             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                            
+
                             Thread.sleep(50);
                             robot.mouseMove(ascend[0], ascend[1]);
                             robot.mousePress(InputEvent.BUTTON1_MASK);
                             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                            
+
                             Thread.sleep(50);
                             robot.mouseMove(confirm[0], confirm[1]);
                             robot.mousePress(InputEvent.BUTTON1_MASK);
                             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                            
+
                             Thread.sleep(50);
                             robot.mouseMove(pro[0], pro[1]);
                             robot.mousePress(InputEvent.BUTTON1_MASK);
                             robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                            
+
                             Thread.sleep(50);
                             robot.mouseMove(fight[0], fight[1]);
                             robot.mousePress(InputEvent.BUTTON1_MASK);
