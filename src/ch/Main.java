@@ -8,7 +8,6 @@ import java.awt.Dimension;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.event.InputEvent;
-import static java.lang.Math.abs;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JFrame;
@@ -18,6 +17,7 @@ import org.jnativehook.keyboard.NativeKeyEvent;
 import org.jnativehook.keyboard.NativeKeyListener;
 import org.jnativehook.mouse.NativeMouseEvent;
 import org.jnativehook.mouse.NativeMouseInputListener;
+import static java.lang.Math.abs;
 
 /**
  *
@@ -405,7 +405,7 @@ public class Main extends javax.swing.JFrame {
                     .addComponent(scrollButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrollX, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(scrollY, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 172, Short.MAX_VALUE)
+                .addGap(172, 172, 172)
                 .addComponent(levelButton)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel13)
@@ -658,6 +658,7 @@ public class Main extends javax.swing.JFrame {
             AutoLevel(int[] i, int[] j) {
                 tab = i;
                 scroll = j;
+
             }
 
             @Override
@@ -670,20 +671,31 @@ public class Main extends javax.swing.JFrame {
                     if (abs(width - 3000) < 10 && abs(height - 2000) < 10) {
                         size = 2.0;
                     }
-
+                    int flag = 0;
                     int[] hero = new int[2];
                     //calculate the hero level button location
                     hero[0] = (int) (tab[0] * size);
                     hero[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.7);
 
+                    int[] hero1 = new int[2];
+                    //calculate the hero level button location
+                    hero1[0] = (int) (tab[0] * size);
+                    hero1[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.5);
+
+                    int[] hero2 = new int[2];
+                    //calculate the hero level button location
+                    hero2[0] = (int) (tab[0] * size);
+                    hero2[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.3);
+
                     //calculate the skill level button location
                     int[] skill = new int[2];
                     skill[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 0.7);
                     skill[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.85);
+
                     //Robot
                     Robot robot = new Robot();
                     while (running) {
-
+                        flag++;
                         Thread.sleep(1000);
                         robot.mouseMove((int) (scroll[0] * size), (int) (scroll[1] * size));
                         robot.mousePress(InputEvent.BUTTON1_MASK);
@@ -694,13 +706,23 @@ public class Main extends javax.swing.JFrame {
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        for (int i = 0; i < 5; i++) {
-                            Thread.sleep(1000);
-                            robot.mouseMove(hero[0], hero[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                        }
+                        Thread.sleep(1000);
+                        robot.mouseMove(hero[0], hero[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(1000);
+                        robot.mouseMove(hero1[0], hero1[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(1000);
+                        robot.mouseMove(hero2[0], hero2[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
                     }
+                    Thread.currentThread().interrupt();
 
                 } catch (AWTException | InterruptedException ex) {
                     Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
@@ -778,6 +800,7 @@ public class Main extends javax.swing.JFrame {
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
                     }
+                    Thread.currentThread().interrupt();
 
                 } catch (AWTException | InterruptedException ex) {
                     Logger.getLogger(Main.class.getName()).log(Level.SEVERE, null, ex);
