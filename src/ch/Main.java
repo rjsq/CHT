@@ -673,6 +673,43 @@ public class Main extends javax.swing.JFrame {
                         size = 2.0;
                     }
 
+                    int flag = 0;
+
+                    //relic location
+                    int[] relic = new int[2];
+                    relic[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 0.56);
+                    relic[1] = tab[1];
+
+                    //delete location
+                    int[] del = new int[2];
+                    del[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 0.5);
+                    del[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.65);
+
+                    //yes location
+                    int[] yes = new int[2];
+                    yes[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 0.95);
+                    yes[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.58);
+                    
+                    //yes location
+                    int[] ascend = new int[2];
+                    ascend[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 2.12);
+                    ascend[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.355);
+                    
+                    //yes location
+                    int[] confirm = new int[2];
+                    confirm[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 0.95);
+                    confirm[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.7);
+
+                    //yes location
+                    int[] pro = new int[2];
+                    pro[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 2.1);
+                    pro[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.3);
+                    
+                    //yes location
+                    int[] fight = new int[2];
+                    fight[0] = (int) (tab[0] * size) + (int) ((scroll[0] - tab[0]) * size * 1.8);
+                    fight[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.3);
+
                     int[] hero0 = new int[2];
                     //calculate the hero level button location
                     hero0[0] = (int) (tab[0] * size);
@@ -702,7 +739,7 @@ public class Main extends javax.swing.JFrame {
                     //calculate the hero level button location
                     hero5[0] = (int) (tab[0] * size);
                     hero5[1] = (int) (tab[1] * size) + (int) ((scroll[1] - tab[1]) * size * 0.3);
-                    
+
                     int[] hero6 = new int[2];
                     //calculate the hero level button location
                     hero6[0] = (int) (tab[0] * size);
@@ -717,6 +754,8 @@ public class Main extends javax.swing.JFrame {
                     Robot robot = new Robot();
                     while (running) {
 
+                        flag++;
+
                         Thread.sleep(500);
                         robot.mouseMove((int) (scroll[0] * size), (int) (scroll[1] * size));
                         robot.mousePress(InputEvent.BUTTON1_MASK);
@@ -726,52 +765,90 @@ public class Main extends javax.swing.JFrame {
                         robot.mouseMove(skill[0], skill[1]);
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                        for (int i = 0; i < 5; i++) {
-                            Thread.sleep(50);
-                            robot.mouseMove(hero0[0], hero0[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                            Thread.sleep(50);
-                            robot.mouseMove(hero1[0], hero1[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        Thread.sleep(50);
+                        robot.keyPress(KeyEvent.VK_Q);
 
-                            Thread.sleep(50);
-                            robot.mouseMove(hero2[0], hero2[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        Thread.sleep(50);
+                        robot.mouseMove(hero0[0], hero0[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                            Thread.sleep(50);
-                            robot.mouseMove(hero3[0], hero3[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        Thread.sleep(50);
+                        robot.mouseMove(hero1[0], hero1[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                            Thread.sleep(50);
-                            robot.mouseMove(hero4[0], hero4[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        Thread.sleep(50);
+                        robot.mouseMove(hero2[0], hero2[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                            Thread.sleep(50);
-                            robot.mouseMove(hero5[0], hero5[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
-                            
-                            Thread.sleep(50);
-                            robot.mouseMove(hero6[0], hero6[1]);
-                            robot.mousePress(InputEvent.BUTTON1_MASK);
-                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                        Thread.sleep(50);
+                        robot.mouseMove(hero3[0], hero3[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                            Thread.sleep(50);
-                            robot.keyPress(KeyEvent.VK_T);
-                            robot.keyRelease(KeyEvent.VK_T);
+                        Thread.sleep(50);
+                        robot.mouseMove(hero4[0], hero4[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(50);
+                        robot.mouseMove(hero5[0], hero5[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(50);
+                        robot.mouseMove(hero6[0], hero6[1]);
+                        robot.mousePress(InputEvent.BUTTON1_MASK);
+                        robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                        Thread.sleep(100);
+                        robot.keyRelease(KeyEvent.VK_Q);
 
 //                            Thread.sleep(100);
 //                            robot.keyPress(KeyEvent.VK_T);
 //                            robot.keyRelease(KeyEvent.VK_T);
+                        if (flag % 2400 == 0) {
+                            Thread.sleep(50);
+                            robot.mouseMove(relic[0], relic[1]);
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                            Thread.sleep(50);
+                            robot.mouseMove(del[0], del[1]);
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+
+                            Thread.sleep(50);
+                            robot.mouseMove(yes[0], yes[1]);
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            
+                            Thread.sleep(50);
+                            robot.mouseMove(ascend[0], ascend[1]);
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            
+                            Thread.sleep(50);
+                            robot.mouseMove(confirm[0], confirm[1]);
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            
+                            Thread.sleep(50);
+                            robot.mouseMove(pro[0], pro[1]);
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
+                            
+                            Thread.sleep(50);
+                            robot.mouseMove(fight[0], fight[1]);
+                            robot.mousePress(InputEvent.BUTTON1_MASK);
+                            robot.mouseRelease(InputEvent.BUTTON1_MASK);
                         }
 
                     }
+
                     Thread.currentThread().interrupt();
 
                 } catch (AWTException | InterruptedException ex) {
