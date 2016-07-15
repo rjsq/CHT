@@ -5,7 +5,6 @@ package ch;
 
 import java.awt.AWTException;
 import java.awt.Dimension;
-import java.awt.Frame;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.event.InputEvent;
