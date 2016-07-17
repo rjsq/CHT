@@ -812,12 +812,12 @@ public class Main extends javax.swing.JFrame {
 
                         flag++;
 
-                        Thread.sleep(500);
+                        Thread.sleep(250);
                         robot.mouseMove((int) (scroll[0] * size), (int) (scroll[1] * size));
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
 
-                        Thread.sleep(500);
+                        Thread.sleep(250);
                         robot.mouseMove(skill[0], skill[1]);
                         robot.mousePress(InputEvent.BUTTON1_MASK);
                         robot.mouseRelease(InputEvent.BUTTON1_MASK);
@@ -866,8 +866,8 @@ public class Main extends javax.swing.JFrame {
 //                            Thread.sleep(100);
 //                            robot.keyPress(KeyEvent.VK_T);
 //                            robot.keyRelease(KeyEvent.VK_T);
-                        reText.setText(((int) (ascendtimer * 3600 / 1.5) - (flag % (int) (ascendtimer * 3600 / 1.5))) + "");
-                        if (flag % (int) (ascendtimer * 3600 / 1.5) == 0) {
+                        reText.setText(((int) (ascendtimer * 3600) - (flag % (int) (ascendtimer * 3600))) + "");
+                        if (flag % (int) (ascendtimer * 3600 ) == 0) {
                             Thread.sleep(50);
                             robot.mouseMove(relic[0], relic[1]);
                             robot.mousePress(InputEvent.BUTTON1_MASK);
